@@ -6,14 +6,14 @@ const TodoUsingState = () => {
   const [todos, setTodos] = useState([]);
   const todoNameRef = useRef();
 
-  useEffect(() => {
-    const storedTodos = JSON.parse(localStorage.getItem(localStorageKey));
-    if (storedTodos.length) setTodos(storedTodos);
-  }, []);
+//   useEffect(() => {
+//     const storedTodos = JSON.parse(localStorage.getItem(localStorageKey));
+//     if (storedTodos.length) setTodos(storedTodos);
+//   }, []);
 
-  useEffect(() => {
-    localStorage.setItem(localStorageKey, JSON.stringify(todos));
-  }, [todos]);
+//   useEffect(() => {
+//     localStorage.setItem(localStorageKey, JSON.stringify(todos));
+//   }, [todos]);
 
   const handleAdd = () => {
     const newName = todoNameRef.current.value;
